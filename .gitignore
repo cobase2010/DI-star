@@ -8,4 +8,6 @@ results
 tb_stat
 tmp_files
 tmp_log
-*.SC2Replay
+#*.SC2Replay
+replays.all/*
+
