@@ -41,7 +41,7 @@ if __name__ == '__main__':
     user_config.actor.job_type = 'eval_test'
     user_config.common.type = 'play'
     user_config.actor.episode_num = 1
-    user_config.env.realtime = True
+    user_config.env.realtime = False 
     args = get_args()
     default_model_path = os.path.join(os.path.dirname(__file__), 'rl_model.pth')
     if args.model1 is not None:
@@ -63,7 +63,8 @@ if __name__ == '__main__':
         model2 = default_model_path
 
     assert os.path.exists(model1), 'model1 file : {} does not exist, please download model first!'.format(model1)
-    assert os.path.exists(model2), 'model2 file : {} does not exist, please download model first!'.format(model2)
+    if args.game_type != 'agent_vs_bot':
+        assert os.path.exists(model2), 'model2 file : {} does not exist, please download model first!'.format(model2)
     if not args.cpu:
         assert torch.cuda.is_available(), 'cuda is not available, please install cuda first!'
         user_config.actor.use_cuda = True
