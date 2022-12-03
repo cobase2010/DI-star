@@ -14,8 +14,8 @@ learner:
   job_type: 'train' # 'train' or 'test'
   load_path: '' # load checkpoint when resume
   # load_path: '/home/mark/projects/DI-star/experiments/sl_train_protoss/checkpoint/sl_train_protoss_iteration_40000.pth.tar' # load checkpoint when resume
-  # use_cuda: True  # whether to use cuda
-  use_cuda: False  # whether to use cuda
+  use_cuda: True  # whether to use cuda
+  # use_cuda: False  # whether to use cuda
   use_distributed: False  # whether to use distributed training
   use_value_feature: False  # whether to use value feature
   learning_rate: 0.001  
@@ -39,9 +39,9 @@ learner:
     parse_race: ['P', 'Z']  # races allowed in replay decoding, decode 3 races use ['Z', 'T', 'P']
     train_data_file: '' # either an absolute directory with replays or a file includes an absolute replay path at each line.
     epochs: 10          # repeat num of replay paths
-    batch_size: 4  # training batch size
+    batch_size: 2  # training batch size
     trajectory_length: 24 
-    num_workers: 4      # should be larger than batch size
+    num_workers: 2      # should be larger than batch size
   loss_weight:  # multiple heads loss weight
     # sl loss
     action_type: 30.0
