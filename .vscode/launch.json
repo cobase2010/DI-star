@@ -5,11 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Module",
+            "name": "SL Train",
             "type": "python",
             "request": "launch",
             "module": "distar.bin.sl_train",
             "args": "--data ~/projects/DI-star/replays",
+            "justMyCode": true
+        },
+
+        {
+            "name": "RL Train",
+            "type": "python",
+            "request": "launch",
+            "module": "distar.bin.rl_train",
+            // "args": "--data ~/projects/DI-star/replays",
             "justMyCode": true
         }
     ]
