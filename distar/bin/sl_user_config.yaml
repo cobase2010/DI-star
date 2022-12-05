@@ -13,10 +13,11 @@ learner:
   agent: 'default'  # agent name
   job_type: 'train' # 'train' or 'test'
   # load_path: '' # load checkpoint when resume
-  # load_path: '/home/mark/projects/DI-star/experiments/sl_train_protoss/checkpoint/sl_train_protoss_iteration_40000.pth.tar' # load checkpoint when resume
-  load_path: '/kaggle/working/sl_train_protoss_iteration_latest.pth.tar' # load checkpoint when resume
-  # use_cuda: True  # whether to use cuda
-  use_cuda: False  # whether to use cuda
+  # load_path: '/home/mark/projects/DI-star/experiments/sl_train_protoss/checkpoint/sl_train_protoss_iteration_latest.pth.tar' # load checkpoint when resume
+  # load_path: '/kaggle/working/sl_train_protoss_iteration_latest.pth.tar' # load checkpoint when resume
+  load_path: '/content/sl_train_protoss_iteration_latest.pth.tar' # load checkpoint when resume
+  use_cuda: True  # whether to use cuda
+  # use_cuda: False  # whether to use cuda
   use_distributed: False  # whether to use distributed training
   use_value_feature: False  # whether to use value feature
   learning_rate: 0.001  
